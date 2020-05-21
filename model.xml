@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+<properties>
+	<graphics key="showhiddenfeatures" value="true"/>
+	<graphics key="legendposition" value="175,48"/>
+	<graphics key="legendautolayout" value="false"/>
+	<graphics key="showshortnames" value="false"/>
+	<graphics key="layout" value="horizontal"/>
+	<graphics key="showcollapsedconstraints" value="true"/>
+	<graphics key="legendhidden" value="false"/>
+	<graphics key="layoutalgorithm" value="1"/>
+</properties>
+<struct>
+	<and abstract="true" mandatory="true" name="HistoricalSoundscapeBO">
+		<description>Features for admins of platform. Upload verified content.</description>
+		<feature mandatory="true" name="Login"/>
+		<feature mandatory="true" name="IndividualUserAccounts"/>
+		<and abstract="true" mandatory="true" name="EntityCreationForm">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="LocationCreationForm">
+				<or abstract="true" mandatory="true" name="AddressSelection">
+					<feature name="TextInput"/>
+					<or name="MapSelection">
+						<feature name="MapPin"/>
+						<feature name="PoligonalAreaSelection"/>
+					</or>
+				</or>
+			</and>
+			<feature mandatory="true" name="IteneraryCreationForm"/>
+			<feature mandatory="true" name="EventCreationForm"/>
+			<or mandatory="true" name="MultimediaUpload">
+				<description>Can be through file access or from url from internet.</description>
+				<feature name="FileAccess"/>
+				<feature name="SourceUrl"/>
+			</or>
+		</and>
+	</and>
+</struct>
+</featureModel>
