@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature automatic="selected" name="HistoricalSoundscapeBO"/>
-	<feature automatic="selected" name="Login"/>
-	<feature automatic="selected" name="IndividualUserAccounts"/>
-	<feature automatic="selected" name="EntityCreationForm"/>
-	<feature automatic="selected" name="LocationCreationForm"/>
-	<feature automatic="selected" name="AddressSelection"/>
-	<feature manual="selected" name="TextInput"/>
-	<feature automatic="selected" manual="selected" name="MapSelection"/>
-	<feature manual="selected" name="MapPin"/>
-	<feature manual="selected" name="PoligonalAreaSelection"/>
-	<feature automatic="selected" name="IteneraryCreationForm"/>
-	<feature automatic="selected" name="EventCreationForm"/>
-	<feature automatic="selected" name="MultimediaUpload"/>
-	<feature manual="selected" name="FileAccess"/>
-	<feature manual="selected" name="SourceUrl"/>
+	<feature name="HistoricalSoundscapeBO"/>
+	<feature name="Login"/>
+	<feature name="IndividualUserAccounts"/>
+	<feature name="EntityCreationForm"/>
+	<feature name="LocationCreationForm"/>
+	<feature name="AddressSelection"/>
+	<feature name="TextInput"/>
+	<feature name="MapSelection"/>
+	<feature name="MapPin"/>
+	<feature name="PoligonalAreaSelection"/>
+	<feature name="IteneraryCreationForm"/>
+	<feature name="EventCreationForm"/>
+	<feature name="MultimediaUpload"/>
+	<feature name="FileAccess"/>
+	<feature name="SourceUrl"/>
 </configuration>
