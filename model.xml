@@ -15,9 +15,10 @@
 			<description>Features for admins of platform. Upload verified content.</description>
 			<feature mandatory="true" name="Login"/>
 			<feature mandatory="true" name="IndividualUserAccounts"/>
-			<and abstract="true" mandatory="true" name="EntityCreationForm">
+			<and abstract="true" mandatory="true" name="EntityForm">
 				<graphics key="collapsed" value="false"/>
-				<and mandatory="true" name="LocationCreationForm">
+				<and mandatory="true" name="LocationForm">
+					<urls>Add location PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addPlace.png</urls>
 					<or abstract="true" mandatory="true" name="AddressSelection">
 						<feature name="TextInput">
 							<urls>Google maps location text input - https://www.youtube.com/watch?v=aQriruxZiOA</urls>
@@ -32,16 +33,23 @@
 						</or>
 					</or>
 				</and>
-				<feature mandatory="true" name="IteneraryCreationForm"/>
-				<feature mandatory="true" name="EventCreationForm"/>
+				<feature mandatory="true" name="ItineraryForm">
+					<urls>Add itinerary PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addItinerary.png</urls>
+				</feature>
+				<feature mandatory="true" name="EventForm"/>
 				<or mandatory="true" name="MultimediaUpload">
 					<description>Can be through file access or from url from internet.</description>
 					<feature name="FileAccess">
-						<urls>Youtube file upload - https://www.youtube.com/watch?v=nzB36tBakMg</urls>
+						<urls>
+							Youtube file upload - https://www.youtube.com/watch?v=nzB36tBakMg
+							Add file PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addFile.png
+						</urls>
 					</feature>
 					<feature name="SourceUrl"/>
 				</or>
+				<feature mandatory="true" name="PreviewEntityChange"/>
 			</and>
+			<feature name="DifferentCities"/>
 		</and>
 	</struct>
 </featureModel>

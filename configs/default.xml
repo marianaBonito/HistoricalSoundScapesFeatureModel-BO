@@ -3,16 +3,18 @@
 	<feature automatic="selected" name="HistoricalSoundscapeBO"/>
 	<feature automatic="selected" name="Login"/>
 	<feature automatic="selected" name="IndividualUserAccounts"/>
-	<feature automatic="selected" name="EntityCreationForm"/>
-	<feature automatic="selected" name="LocationCreationForm"/>
+	<feature automatic="selected" name="EntityForm"/>
+	<feature automatic="selected" name="LocationForm"/>
 	<feature automatic="selected" name="AddressSelection"/>
 	<feature manual="selected" name="TextInput"/>
 	<feature automatic="selected" manual="selected" name="MapSelection"/>
 	<feature manual="selected" name="MapPin"/>
 	<feature manual="selected" name="PoligonalAreaSelection"/>
-	<feature automatic="selected" name="IteneraryCreationForm"/>
-	<feature automatic="selected" name="EventCreationForm"/>
+	<feature automatic="selected" name="ItineraryForm"/>
+	<feature automatic="selected" name="EventForm"/>
 	<feature automatic="selected" name="MultimediaUpload"/>
 	<feature manual="selected" name="FileAccess"/>
 	<feature manual="selected" name="SourceUrl"/>
+	<feature name="PreviewEntityChange"/>
+	<feature name="DifferentCities"/>
 </configuration>
