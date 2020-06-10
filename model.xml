@@ -2,7 +2,7 @@
 <featureModel>
 	<properties>
 		<graphics key="showhiddenfeatures" value="true"/>
-		<graphics key="legendposition" value="175,48"/>
+		<graphics key="legendposition" value="468,60"/>
 		<graphics key="legendautolayout" value="false"/>
 		<graphics key="showshortnames" value="false"/>
 		<graphics key="layout" value="horizontal"/>
@@ -13,43 +13,113 @@
 	<struct>
 		<and abstract="true" mandatory="true" name="HistoricalSoundscapeBO">
 			<description>Features for admins of platform. Upload verified content.</description>
-			<feature mandatory="true" name="Login"/>
-			<feature mandatory="true" name="IndividualUserAccounts"/>
+			<feature mandatory="true" name="Login">
+				<description>
+					This feature allows the user's  to validate their credentials
+					and access their private data.
+				</description>
+			</feature>
+			<feature mandatory="true" name="IndividualUserAccounts">
+				<description>This feature allows user's to have private data in the system.</description>
+			</feature>
 			<and abstract="true" mandatory="true" name="EntityForm">
+				<description>
+					This abstract feature represents the different forms
+					available for the admin users  to add/change/remove
+					Locations, Itineraries, Events and multimedia to each of the
+					previously mentioned.
+				</description>
 				<graphics key="collapsed" value="false"/>
 				<and mandatory="true" name="LocationForm">
+					<description>
+						This feature allows the admin user to add, change or delete
+						a specific location from the system.
+					</description>
 					<urls>Add location PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addPlace.png</urls>
 					<or abstract="true" mandatory="true" name="AddressSelection">
+						<description>
+							This abstract feature represents how the admin user can
+							select the address of a particular place.
+						</description>
 						<feature name="TextInput">
+							<description>
+								This feature associates an admin input address to a specific
+								place.
+							</description>
 							<urls>Google maps location text input - https://www.youtube.com/watch?v=aQriruxZiOA</urls>
 						</feature>
 						<or name="MapSelection">
+							<description>
+								This feature allows the admin user to select a place's
+								address by finding it and selecting it on the map.
+							</description>
 							<feature name="MapPin">
+								<description>
+									This feature allows the admin user to select a pin point
+									address on the map.
+								</description>
 								<urls>Google maps pin location - https://www.youtube.com/watch?v=QMrHJrBRYfM</urls>
 							</feature>
 							<feature name="PoligonalAreaSelection">
+								<description>
+									This feature allows the admin user to select multiple pins
+									on the map creating a poligon and assigning the poligonal
+									area to the address of the specific place.
+								</description>
 								<urls>Google maps area calculator tool - https://www.youtube.com/watch?v=zyOkR9P2P0I</urls>
 							</feature>
 						</or>
 					</or>
 				</and>
 				<feature mandatory="true" name="ItineraryForm">
+					<description>
+						This feature allows the admin user to add, change or delete
+						a specific itinerary from the system.
+					</description>
 					<urls>Add itinerary PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addItinerary.png</urls>
 				</feature>
-				<feature mandatory="true" name="EventForm"/>
+				<feature mandatory="true" name="EventForm">
+					<description>
+						This feature allows the admin user to add, change or delete
+						a specific event from the system.
+					</description>
+				</feature>
 				<or mandatory="true" name="MultimediaUpload">
-					<description>Can be through file access or from url from internet.</description>
+					<description>
+						This feature allows a user to add, change, or delte
+						multimedia to a location or event.
+					</description>
 					<feature name="FileAccess">
+						<description>
+							This feature requires the software to request access to the
+							user's files. If not granted, the features dependent on this
+							feature will not work properly.
+						</description>
 						<urls>
 							Youtube file upload - https://www.youtube.com/watch?v=nzB36tBakMg
 							Add file PASEV - https://github.com/marianaBonito/APDC-Investigation-HistoricalSoundscapesCaseOfEvora-DomainAnalysis/blob/master/Diagrams/PicturesForDiagrams/addFile.png
 						</urls>
 					</feature>
-					<feature name="SourceUrl"/>
+					<feature name="SourceUrl">
+						<description>
+							This feature allows the media in the system to be obtained
+							from a link rather than storing it in the server.
+						</description>
+					</feature>
 				</or>
-				<feature mandatory="true" name="PreviewEntityChange"/>
+				<feature mandatory="true" name="PreviewEntityChange">
+					<description>
+						This feature allows the admin to preview the impact their
+						alteration is going to have on the front office platform.
+					</description>
+				</feature>
 			</and>
-			<feature name="DifferentCities"/>
+			<feature name="DifferentCities">
+				<description>
+					This feature is used if the software being designed has more
+					than one city of focus for its historical soundscapes.
+				</description>
+			</feature>
 		</and>
 	</struct>
 </featureModel>
